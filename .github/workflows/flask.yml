@@ -16,6 +16,10 @@ jobs:
       - name: Run Container
         run: docker run -d -p 5000:5000 flask-app
 
+      - name: Wait for app
+        run: sleep 5
+       
+
       - name: Test API
         run: curl http://localhost:5000
         #trying again
