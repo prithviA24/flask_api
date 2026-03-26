@@ -33,4 +33,4 @@ jobs:
         run: docker logs $(docker ps -aq)
 
       - name: Final API test
-        run: curl http://localhost:5000
+        run: docker exec $(docker ps -q) curl http://localhost:5000
